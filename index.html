@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, user-scalable=no">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <div id="date" class="time">15:44</div>
+        <img src="head.png" alt="">
+    </div>
+    <div class="body">
+        <img src="body.png" alt="">
+    </div>
+    <div class="footer">
+        <img src="footer.png" alt="">
+    </div>
+</body>
+<script>
+    var date = new Date();
+    document.getElementById('date').innerHTML = ("0" + date.getHours()).slice(-2) + ":" + ("0" + date.getMinutes()).slice(-2);
+</script>
+</html>
+<style>
+    .time {
+        font-family: sans-serif;
+        position: absolute;
+        left: 10px;
+        top: 7px;
+        font-weight: bold;
+        font-size: 26px;
+        color: #484848;
+    }
+
+    img {
+        display: block;
+    }
+
+    .header {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+
+    .footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+    }
+
+    .body {
+        padding-top: 200px;
+        padding-bottom: 150px;
+    }
+
+    body {
+        margin: 0;
+    }
+</style>
